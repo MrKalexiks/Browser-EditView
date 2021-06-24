@@ -83,6 +83,16 @@ namespace EditView.Browser.App.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_go_2048px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_go_2048px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_plus_math_2048px {
             get {
                 object obj = ResourceManager.GetObject("icons8_plus_math_2048px", resourceCulture);
@@ -96,6 +106,16 @@ namespace EditView.Browser.App.Properties {
         internal static System.Drawing.Bitmap icons8_restart_2048px {
             get {
                 object obj = ResourceManager.GetObject("icons8_restart_2048px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_2048px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_search_2048px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

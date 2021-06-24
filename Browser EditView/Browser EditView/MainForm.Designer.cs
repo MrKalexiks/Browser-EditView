@@ -36,16 +36,20 @@ namespace Browser_EditView
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.OpenedTabs = new System.Windows.Forms.ListBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.webControl1 = new Awesomium.Windows.Forms.WebControl(this.components);
+            this.GoToSiteButton = new System.Windows.Forms.Button();
             this.NewTabButton = new System.Windows.Forms.Button();
             this.RefreshPageButton = new System.Windows.Forms.Button();
             this.RightButton = new System.Windows.Forms.Button();
             this.LeftButton = new System.Windows.Forms.Button();
-            this.OpenedTabs = new System.Windows.Forms.ListBox();
-            this.webControl1 = new Awesomium.Windows.Forms.WebControl(this.components);
             this.ToolsAndTabs.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ToolsAndTabs
@@ -102,6 +106,54 @@ namespace Browser_EditView
             this.panel1.Size = new System.Drawing.Size(147, 38);
             this.panel1.TabIndex = 0;
             // 
+            // OpenedTabs
+            // 
+            this.OpenedTabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OpenedTabs.FormattingEnabled = true;
+            this.OpenedTabs.Location = new System.Drawing.Point(3, 3);
+            this.OpenedTabs.Name = "OpenedTabs";
+            this.OpenedTabs.Size = new System.Drawing.Size(133, 380);
+            this.OpenedTabs.TabIndex = 0;
+            this.OpenedTabs.SelectedIndexChanged += new System.EventHandler(this.OpenedTabs_SelectedIndexChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.GoToSiteButton);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(147, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(653, 38);
+            this.panel2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(6, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(606, 29);
+            this.textBox1.TabIndex = 0;
+            // 
+            // webControl1
+            // 
+            this.webControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webControl1.Location = new System.Drawing.Point(147, 38);
+            this.webControl1.Size = new System.Drawing.Size(653, 412);
+            this.webControl1.TabIndex = 2;
+            // 
+            // GoToSiteButton
+            // 
+            this.GoToSiteButton.BackgroundImage = global::EditView.Browser.App.Properties.Resources.icons8_go_2048px;
+            this.GoToSiteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.GoToSiteButton.FlatAppearance.BorderSize = 0;
+            this.GoToSiteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GoToSiteButton.Location = new System.Drawing.Point(618, 2);
+            this.GoToSiteButton.Name = "GoToSiteButton";
+            this.GoToSiteButton.Size = new System.Drawing.Size(32, 35);
+            this.GoToSiteButton.TabIndex = 4;
+            this.GoToSiteButton.UseVisualStyleBackColor = true;
+            this.GoToSiteButton.Click += new System.EventHandler(this.GoToSiteButton_Click);
+            // 
             // NewTabButton
             // 
             this.NewTabButton.BackgroundImage = global::EditView.Browser.App.Properties.Resources.icons8_plus_math_2048px;
@@ -151,29 +203,13 @@ namespace Browser_EditView
             this.LeftButton.TabIndex = 0;
             this.LeftButton.UseVisualStyleBackColor = true;
             // 
-            // OpenedTabs
-            // 
-            this.OpenedTabs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OpenedTabs.FormattingEnabled = true;
-            this.OpenedTabs.Location = new System.Drawing.Point(3, 3);
-            this.OpenedTabs.Name = "OpenedTabs";
-            this.OpenedTabs.Size = new System.Drawing.Size(133, 380);
-            this.OpenedTabs.TabIndex = 0;
-            this.OpenedTabs.SelectedIndexChanged += new System.EventHandler(this.OpenedTabs_SelectedIndexChanged);
-            // 
-            // webControl1
-            // 
-            this.webControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webControl1.Location = new System.Drawing.Point(147, 0);
-            this.webControl1.Size = new System.Drawing.Size(653, 450);
-            this.webControl1.TabIndex = 1;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.webControl1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.ToolsAndTabs);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -182,6 +218,8 @@ namespace Browser_EditView
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -198,6 +236,9 @@ namespace Browser_EditView
         private System.Windows.Forms.Button NewTabButton;
         private System.Windows.Forms.Button RefreshPageButton;
         private System.Windows.Forms.ListBox OpenedTabs;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button GoToSiteButton;
+        private System.Windows.Forms.TextBox textBox1;
         private Awesomium.Windows.Forms.WebControl webControl1;
     }
 }

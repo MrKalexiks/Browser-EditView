@@ -92,6 +92,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_webpage.ico" />
+    <None Include="Resources\icons8_go_2048px.png" />
+    <None Include="Resources\icons8_search_2048px.png" />
     <None Include="Resources\icons8_restart_2048px.png" />
     <None Include="Resources\icons8_plus_math_2048px.png" />
     <None Include="Resources\icons8_forward_2048px.png" />
